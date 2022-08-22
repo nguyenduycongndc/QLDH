@@ -1,0 +1,31 @@
+ĐƠN HÀNG [Anh Công: 3h, Tâm: 4.5h(export:2.5h, còn lại: 2h)]
+- Mã đơn hàng bắt đầu bằng số 001 (VD: ĐH_001)
+- Có thể chỉnh sửa Thuế của đơn hàng 
+- Export toàn bộ thông tin trường nhập khi thêm đơn hàng (trừ bảng phương thức thanh toán)
+- Khi export, trường thời hạn hoàn công đang export sai
+- Thêm trường "Mã nhà cung cấp" 供應商代碼 (Ren thông tin khi chọn Nhà cung cấp)
+- Thêm trường :
+   + Hạng mục dự toán 預算項次：text số 
+   + Tên dự toán: 預算名稱：text 
+   + Số tiền 金額： gồm 1 ô ghi số tiền, 1 ô chọn tiền tệ
+- Bảng Phương thức thanh toán:
++ Mã số nhận hàng 收貨單號: text
++ Ngày nhận hàng 收貨日期：chọn ngày
++ Số lượng nghiệm thu 驗收數量
++ Số tiền nghiệm thu gồm thuế VAT 驗收含稅金額：gồm 1 ô ghi số tiền, 1 ô chọn tiền tệ
+- Trường loại sản phẩm sửa thành Phân loại đơn hàng - Hạng mục lớn 採購分類-大類
+- Trường Loại công trình sửa thành Phân loại đơn hàng - Hạng mục nhỏ 採購分類-小類
+NHẬP KHẨU [Anh Công 2h , Tâm 2h]
+- Export toàn bộ thông tin trường nhập khi thêm phiếu
+- Thêm trường "Điều kiện mua bán 貿易條件"：text
+- Thêm trường Tài liệu xuất hàng 出貨資料：Text chữ cái và số
+- Thêm trường (gồm 1 ô ghi số tiền, 1 ô chọn tiền tệ)
+    + Phí đại lý 代理費
+    + Phí khác 其他費用
+- Thêm trường "Điều kiện thanh toán" (thông tin liên kết từ Đơn hàng sang)
+- Số tiền hàng ban đầu (Là số tiền trước thuế ở Đơn hàng liên kết sang khi chọn mã đơn hàng)
+NHÀ CUNG CẤP [Tâm 30m]
+[THÊM, SỬA NHÀ CUNG CẤP] Số điện thoại nhập  text
+[THÊM, SỬA NHÀ CUNG CẤP] Loại hình NCC thêm loại: Mua bán/ thương mại
+TÀI KHOẢN [Anh Công: 2h, Tâm: 2.5h]
+- Phân quyền tài khoản có thể xóa đơn hàng (Yêu cầu chỉnh sửa, hiện tại chưa có nghiệp vụ này)

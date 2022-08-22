@@ -1,0 +1,597 @@
+{
+	"info": {
+		"_postman_id": "dcd1a4a1-1c25-45f2-a884-02bff3476f57",
+		"name": "QuanLiDonHang",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserName\":\"thu115\",\r\n    \"PhoneNumber\":\"0971967115\",\r\n    \"Email\":\"thuaps@gmail.vn\",\r\n    \"Password\":\"123456a@\",\r\n    \"ConfirmPassword\":\"123456a@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}user/Add",
+							"host": [
+								"{{server}}user"
+							],
+							"path": [
+								"Add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44360/api/user/Detail?Id=8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"user",
+								"Detail"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44360/api/user/ResetPassword?Id=4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"user",
+								"ResetPassword"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\":4,\r\n    \"Username\":\"nguyenvanthu\",\r\n    \"PhoneNumber\":\"0971967310\",\r\n    \"Email\":\"thu@winds.vn\",\r\n    \"IsActive\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44360/api/user/Update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"user",
+								"Update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44360/api/user/Search?NamOrPhone&Role=-1&IsActive=-1&Page=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"user",
+								"Search"
+							],
+							"query": [
+								{
+									"key": "NamOrPhone",
+									"value": null
+								},
+								{
+									"key": "Role",
+									"value": "-1"
+								},
+								{
+									"key": "IsActive",
+									"value": "-1"
+								},
+								{
+									"key": "Page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44360/api/user/Delete?Id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"user",
+								"Delete"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Loginweb",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PhoneNumber\":\"0971967114\",\r\n    \"Password\":\"123456a@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}Login/LoginWeb",
+							"host": [
+								"{{server}}Login"
+							],
+							"path": [
+								"LoginWeb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Providers",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"cmt\",\r\n  \"name\": \"test\",\r\n  \"tax\": \"KHJ\",\r\n  \"phoneNumber\": \"0971967310\",\r\n  \"email\": \"thu@winds.vn\",\r\n  \"contact\": \"Hà Nội\",\r\n  \"contactPhoneNumber\": \"0338647894\",\r\n  \"address\": \"Kim Giang\",\r\n  \"officeAddress\": \"Windsoft\",\r\n  \"fax\": \"0123456789\",\r\n  \"registrationDate\": \"14/10/2021\",\r\n  \"contructionType\": \"test\",\r\n  \"productType\": \"test\",\r\n  \"representative\": \"oke\",\r\n  \"certificateProduct\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44360/api/provider/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"provider",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44360/api/provider/Search?str&Page=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"provider",
+								"Search"
+							],
+							"query": [
+								{
+									"key": "str",
+									"value": null
+								},
+								{
+									"key": "Page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44360/api/provider/Detail?Id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"provider",
+								"Detail"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"code\": \"test\",\r\n  \"name\": \"test\",\r\n  \"tax\": \"KHJ\",\r\n  \"phoneNumber\": \"0971967310\",\r\n  \"email\": \"thu@winds.vn\",\r\n  \"contact\": \"Hà Nội\",\r\n  \"contactPhoneNumber\": \"0338647894\",\r\n  \"address\": \"Kim Giang\",\r\n  \"officeAddress\": \"Windsoft\",\r\n  \"fax\": \"0123456789\",\r\n  \"registrationDate\": \"14/10/2021\",\r\n  \"contructionType\": \"test\",\r\n  \"productType\": \"test\",\r\n  \"representative\": \"oke\",\r\n  \"certificateProduct\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44360/api/provider/Update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"provider",
+								"Update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contructionName\": \"Tài chính7\",\r\n  \"contructionType\": \"ts\",\r\n  \"productType\": \"cc\",\r\n  \"amountBeforeTax\": \"12000\",\r\n  \"contactNumber\": \"0123456789\",\r\n  \"deadlineDate\": \"14/10/2021\",\r\n  \"outOfDate\": \"14/10/2021\",\r\n  \"warrantyPeriod\": \"15/10/2021\",\r\n  \"contactCode\": \"KL1\",\r\n  \"isImport\": 1,\r\n  \"description\": \"Đẹp\",\r\n  \"status\": 1,\r\n  \"moneyTypeID\": 1,\r\n  \"providerID\": 1,\r\n  \"path\": \"test\",\r\n  \"payment1\": 10,\r\n  \"paymentDate1\": \"14/10/2021\",\r\n  \"payment2\": 20,\r\n  \"paymentDate2\": \"14/10/2021\",\r\n  \"payment3\": 70,\r\n  \"paymentDate3\": \"14/10/2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44360/api/order/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"order",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44360/api/order/Detail?Id=8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"order",
+								"Detail"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}order/Search?ProviderId=-1&Code&FromDate&ToDate&page=3",
+							"host": [
+								"{{server}}order"
+							],
+							"path": [
+								"Search"
+							],
+							"query": [
+								{
+									"key": "ProviderId",
+									"value": "-1"
+								},
+								{
+									"key": "Code",
+									"value": null
+								},
+								{
+									"key": "FromDate",
+									"value": null
+								},
+								{
+									"key": "ToDate",
+									"value": null
+								},
+								{
+									"key": "page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44360/api/order/Test",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"order",
+								"Test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ID\":8,  \r\n  \"contructionName\": \"Tài chính8\",\r\n  \"contructionType\": \"ts\",\r\n  \"productType\": \"cc\",\r\n  \"amountBeforeTax\": \"12000\",\r\n  \"contactNumber\": \"0123456789\",\r\n  \"deadlineDate\": \"15/10/2021\",\r\n  \"outOfDate\": \"15/10/2021\",\r\n  \"warrantyPeriod\": \"15/10/2021\",\r\n  \"contactCode\": \"KL1\",\r\n  \"isImport\": 1,\r\n  \"description\": \"Đẹp\",\r\n  \"status\": 1,\r\n  \"moneyTypeID\": 1,\r\n  \"providerID\": 1,\r\n  \"path\": \"test\",\r\n  \"payment1\": 20,\r\n  \"paymentDate1\": \"16/10/2021\",\r\n  \"payment2\": 30,\r\n  \"paymentDate2\": \"17/10/2021\",\r\n  \"payment3\": 50,\r\n  \"paymentDate3\": \"18/10/2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44360/api/order/Update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"order",
+								"Update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Configs",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44360/api/config/Update?Code=KC",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"config",
+								"Update"
+							],
+							"query": [
+								{
+									"key": "Code",
+									"value": "KC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetConfig",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44360/api/config/Detail",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44360",
+							"path": [
+								"api",
+								"config",
+								"Detail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

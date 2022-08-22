@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PagedList" Version="1.17.0" />
+    <PackageReference Include="SharpRaven" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyDonHang.Common\QuanLyDonHang.Common.csproj" />
+    <ProjectReference Include="..\QuanLyDonHang.Domain\QuanLyDonHang.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,46 @@
+{
+  "menus": [
+    {
+      "name": "Đơn hàng/訂單",
+      "icon": "fas fa-chart-pie",
+      "children": null,
+      "path": "/don-hang",
+      "badge": null
+    },
+    {
+      "name": "Nhà cung cấp/供应商",
+      "icon": "fas fa-users",
+      "children": null,
+      "path": "/nha-cung-cap",
+      "badge": null
+    },
+    {
+      "name": "Cấu hình/配置",
+      "icon": "fas fa-sliders-h",
+      "children": null,
+      "path": "/cau-hinh",
+      "badge": null
+    },
+    {
+      "name": "Phiếu nhập/進口資料",
+      "icon": "fas fa-print",
+      "children": null,
+      "path": "/phieu-nhap",
+      "badge": null
+    },
+    {
+      "name": "Tài liệu/附件",
+      "icon": "fas fa-folder-open",
+      "children": null,
+      "path": "/tai-lieu",
+      "badge": null
+    },
+    {
+      "name": "Tài khoản/帐户",
+      "icon": "fas fa-list-alt",
+      "children": null,
+      "path": "/tai-khoan",
+      "badge": null
+    }
+  ]
+}
